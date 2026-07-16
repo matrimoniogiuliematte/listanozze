@@ -634,7 +634,7 @@ async function send(data){
 
   await fetch("https://script.google.com/macros/s/AKfycbz5OtZUJM8yJrFMFzNMJ8AZTc_iAVaA86szL6lynZ0V2_cr-7jORtGiAYIGWLlaDzaL/exec", {
     method: "POST",
-    mode: "no-cors",
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)
   });
 
